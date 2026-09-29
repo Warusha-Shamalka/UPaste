@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=UPaste
+Comment=Local clipboard history manager
+Exec=clipboard_manager
+Terminal=false
+Categories=Utility;
+StartupNotify=true

@@ -8,4 +8,9 @@ settings.local.json
 packages.microsoft.gpg
 .vscode
 /build/
+/build-*/
+/parts/
+/prime/
+/stage/
+/*.snap
 

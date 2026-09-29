@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(ClipboardManager LANGUAGES C)
 
+include(GNUInstallDirs)
+
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
@@ -22,6 +24,14 @@ target_include_directories(clipboard_manager PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 target_link_libraries(clipboard_manager PRIVATE
     PkgConfig::GTK
     PkgConfig::SQLITE3
+)
+
+install(TARGETS clipboard_manager
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(FILES packaging/upaste.desktop
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/applications
 )
 
 add_custom_target(run

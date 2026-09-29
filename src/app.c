@@ -29,8 +29,8 @@ App *app_create(GError **error)
         return NULL;
     }
 
-    window_show_main();
     clipboard_monitor_start(&app->clipboard_monitor, app->database);
+    window_show_main(app->database, &app->clipboard_monitor);
 
     return app;
 }
