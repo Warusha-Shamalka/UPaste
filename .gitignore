@@ -1,0 +1,11 @@
+.env
+*.o
+*.sqlite
+*.sqlite3
+*.db
+.envrc
+settings.local.json
+packages.microsoft.gpg
+.vscode
+/build/
+
