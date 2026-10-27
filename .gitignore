@@ -7,10 +7,11 @@
 settings.local.json
 packages.microsoft.gpg
 .vscode
+.agents
+.codex
 /build/
 /build-*/
 /parts/
 /prime/
 /stage/
 /*.snap
-
